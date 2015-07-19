@@ -57,7 +57,7 @@ angular.module('limetray-app', ['googlechart']).controller("MainCtrl", function 
 				$scope.chart.data.rows.shift();
 
 		});
-		setTimeout($scope.getData,2000);
+		//setTimeout($scope.getData,5000);
 	}
 	
 });
