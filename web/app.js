@@ -39,7 +39,9 @@ angular.module('limetray-app', ['googlechart']).controller("MainCtrl", function 
 
 
 	$scope.getData = function(){
-		$http.get("api/"+$scope.keyword).success(function(data){
+		console.log("keyword: "+encodeURIComponent($scope.keyword));
+		$http.get("api/"+encodeURIComponent($scope.keyword)).success(function(data){
+			console.log(data)
 			$scope.data = data;
 			$scope.date = new Date();
 			$scope.chart.data.rows.push(
@@ -47,7 +49,7 @@ angular.module('limetray-app', ['googlechart']).controller("MainCtrl", function 
 							v: $scope.date.toUTCString()
 						},
 						{
-							v: $scope.data.statuses.length, f: $scope.data.statuses.length+" tweets"
+							v: $scope.data.statuses.length, f: $scope.data.statuses.length+" tweets  "+ $scope.keyword
 						}
 					]
 				}

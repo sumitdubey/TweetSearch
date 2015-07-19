@@ -21,6 +21,7 @@ var twitterSearchClient  = new Twitter.SearchClient(
 );
 
 router.get('/:keyword',function(req, res){
+	console.log("keyword:"+req.params.keyword);
 twitterSearchClient.search({'q': req.params.keyword, since:req.query.since, count:100,}, function(error, result) {
     if (error)
     {
