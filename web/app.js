@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('limetray-app', ['googlechart']).controller("MainCtrl", function ($scope, $http) {
+angular.module('tweet-search-app', ['googlechart']).controller("MainCtrl", function ($scope, $http) {
 	$scope.keyword = "limetray";
 	
 	$scope.chart = {};
