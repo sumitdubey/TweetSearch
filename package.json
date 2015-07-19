@@ -1,5 +1,5 @@
 {
-    "name": "Limetray Tweet Analysis App",
+    "name": "TweetSearch",
     "main": "app.js",
     "dependencies": {
         "express": "~4.0.0",
