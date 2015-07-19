@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>
+        Limetray Tweet Analysis Tool
+    </title>
+</head>
+<body ng-app="limetray-app" ng-controller="MainCtrl">
+<h1>Limetray Tweet Analysis Tool</h1>
+<p>
+</p>
+
+<div>
+<input type = "text" placeholder="Keyword" ng-model="keyword"/>
+  <button ng-click="getData()" >Fetch</button>
+<div google-chart chart="chart" style="{{chart.cssStyle}}"/>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+<script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
