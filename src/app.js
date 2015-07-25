@@ -1,7 +1,7 @@
 var express = require('express');
 var router =  require("./router");
 var app = express();
-var port = process.env.PORT || 5555;
+var port = process.env.PORT || 8080;
 
 app.use('/api',router);
 app.use(express.static(__dirname + '/../web/'));
